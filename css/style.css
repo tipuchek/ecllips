@@ -520,7 +520,8 @@ nav ul li{
         text-align: center;
         cursor: pointer;
         position: fixed;
-        transform: rotate(-90deg) ;
+        right: 32px;
+        transform:rotate(-90deg) ;
         top: 50%;
         background-color: #8500d2;
         border-top-left-radius: 5px;
@@ -539,9 +540,9 @@ nav ul li{
         cursor: pointer;
         position: fixed;
         top: 60%;
-        left: 25px;
         z-index: 9999;
         display: none;
+        transform: translateX(50px);
     }
     .btn-scrollUp:before{
         content: "";

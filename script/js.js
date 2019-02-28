@@ -29,10 +29,21 @@ const wrap = document.querySelector('.wrapper');
 const btnUs = document.querySelector('.btn-contactUs');
 //позиционируем кнопку по правому краю Contact Us относительно блока .wrapper
 function posContactUs(){
-    btnUs.style.right=`${(window.innerWidth - wrap.clientWidth)/2-68}px` ;
+    let coord = (window.innerWidth - wrap.clientWidth)/2-68;
+    if(window.innerWidth > wrap.clientWidth){
+        btnUs.style.right=`${coord}px`;
+    }
+    
+    else{
+        btnUs.style.right=`px` ;
+    }
+    
+    console.log(window.innerWidth);
+    console.log(wrap.clientWidth);
+    console.log(coord)
+    console.log("==============")
 }
 
 posContactUs();//позиция при начальной загрузке
-
 window.onresize = posContactUs; //новая позиция при изменении размера екрана
 //==end======
